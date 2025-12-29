@@ -9,13 +9,11 @@ const PORT = process.env.PORT || 5000;
 /* =====================
    MIDDLEWARE
 ===================== */
-// Allow only your frontend to access the API
 app.use(cors({
-  origin: process.env.FRONTEND_URL || "*", // in .env: FRONTEND_URL=https://your-frontend.netlify.app
+  origin: process.env.FRONTEND_URL || "*", // FRONTEND_URL in .env
   methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true
 }));
-
 app.use(express.json());
 
 /* =====================
