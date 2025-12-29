@@ -16,7 +16,7 @@ const PORT = process.env.PORT || 5000;
 ===================== */
 app.use(express.json());
 app.use(helmet()); // Security headers
-app.use(cors({ origin: process.env.FRONTEND_URL, credentials: true }));
+app.use(cors({ origin: https://695297271d20c7fa7de6c712--week8app.netlify.app/ }));
 
 // Rate limiting
 const limiter = rateLimit({ windowMs: 15*60*1000, max: 100 });
@@ -142,3 +142,4 @@ app.use((err, req, res, next) => {
    START SERVER
 ===================== */
 app.listen(PORT, () => console.log(`✅ Backend running on port ${PORT}`));
+
